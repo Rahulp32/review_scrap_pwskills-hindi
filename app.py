@@ -75,7 +75,7 @@ def index():
                 reviews.append(mydict)
             logging.info("log my final result {}".format(reviews))
 
-            client = pymongo.MongoClient("mongodb+srv://rahulmauryapwskills:pwskills@cluster108.3balwaw.mongodb.net/?retryWrites=true&w=majority")
+            client = pymongo.MongoClient("mongodb+srv://rahulmauryapwskills:<password>@cluster108.3balwaw.mongodb.net/?retryWrites=true&w=majority")
             db = client['review_scrap']
             review_col = db["review_scrap_data"]
             review_col.insert_many(reviews)
